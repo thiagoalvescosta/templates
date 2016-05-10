@@ -46,7 +46,7 @@ public class ${classname} {
 			//Remetente
 			message.setFrom(new InternetAddress(from));
 
-      //Destinatário(s)
+			//Destinatário(s)
 			Address[] toUser = InternetAddress.parse(to);
 
 			message.setRecipients(Message.RecipientType.TO, toUser);
