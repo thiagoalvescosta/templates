@@ -1,5 +1,5 @@
-<#if PackageName?has_content && (PackageName?length > 0) >
-package ${PackageName};
+<#if namespace?has_content && (namespace?length > 0) >
+package ${namespace};
 </#if>		
 
 import javax.mail.*;
@@ -7,7 +7,7 @@ import javax.mail.internet.*;
 import java.util.*;
 import java.io.*;
 
-public class ${ClassName} {
+public class ${classname} {
 	private static Properties props = new Properties();
 
 	static {
@@ -46,7 +46,7 @@ public class ${ClassName} {
 			//Remetente
 			message.setFrom(new InternetAddress(from));
 
-      //Destinatário(s)
+			//Destinatário(s)
 			Address[] toUser = InternetAddress.parse(to);
 
 			message.setRecipients(Message.RecipientType.TO, toUser);
